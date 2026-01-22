@@ -1,0 +1,233 @@
+/* Doxygen Awesome: Precondition/Postcondition customization */
+
+/* Common section styling */
+dl.section {
+    padding: 1em !important;
+    margin: 1em 0 !important;
+    border-radius: 4px !important;
+}
+
+/* Precondition - Blue */
+dl.section.pre,
+dl.pre {
+    background: #e3f2fd !important;
+    border-left: 4px solid #1976d2 !important;
+}
+
+dl.section.pre dt,
+dl.pre dt {
+    color: #1565c0 !important;
+    font-weight: 600 !important;
+    margin-bottom: 0.5em !important;
+}
+
+/* Postcondition - Green */
+dl.section.post,
+dl.post {
+    background: #e8f5e9 !important;
+    border-left: 4px solid #388e3c !important;
+}
+
+dl.section.post dt,
+dl.post dt {
+    color: #2e7d32 !important;
+    font-weight: 600 !important;
+    margin-bottom: 0.5em !important;
+}
+
+/* Return/Returns - Orange */
+dl.section.return,
+dl.return,
+dl.section.returns,
+dl.returns {
+    background: #fff3e0 !important;
+    border-left: 4px solid #f57c00 !important;
+}
+
+dl.section.return dt,
+dl.return dt,
+dl.section.returns dt,
+dl.returns dt {
+    color: #e65100 !important;
+    font-weight: 600 !important;
+    margin-bottom: 0.5em !important;
+}
+
+/* Retval - Purple */
+dl.section.retval,
+dl.retval {
+    background: #f3e5f5 !important;
+    border-left: 4px solid #7b1fa2 !important;
+}
+
+dl.section.retval dt,
+dl.retval dt {
+    color: #6a1b9a !important;
+    font-weight: 600 !important;
+    margin-bottom: 0.5em !important;
+}
+
+/* Common content styling */
+dl.section dd {
+    color: #333 !important;
+    background: transparent !important;
+    margin-left: 0 !important;
+    padding-left: 1em !important;
+}
+
+/* Dark mode support */
+html.dark-mode dl.section.pre,
+html.dark-mode dl.pre {
+    background: #1a2332 !important;
+    border-left: 4px solid #64b5f6 !important;
+}
+
+html.dark-mode dl.section.pre dt,
+html.dark-mode dl.pre dt {
+    color: #90caf9 !important;
+}
+
+html.dark-mode dl.section.post,
+html.dark-mode dl.post {
+    background: #1b2e1f !important;
+    border-left: 4px solid #66bb6a !important;
+}
+
+html.dark-mode dl.section.post dt,
+html.dark-mode dl.post dt {
+    color: #81c784 !important;
+}
+
+html.dark-mode dl.section.return,
+html.dark-mode dl.return,
+html.dark-mode dl.section.returns,
+html.dark-mode dl.returns {
+    background: #2e2416 !important;
+    border-left: 4px solid #ff9800 !important;
+}
+
+html.dark-mode dl.section.return dt,
+html.dark-mode dl.return dt,
+html.dark-mode dl.section.returns dt,
+html.dark-mode dl.returns dt {
+    color: #ffb74d !important;
+}
+
+html.dark-mode dl.section.retval,
+html.dark-mode dl.retval {
+    background: #2a1c2e !important;
+    border-left: 4px solid #ab47bc !important;
+}
+
+html.dark-mode dl.section.retval dt,
+html.dark-mode dl.retval dt {
+    color: #ce93d8 !important;
+}
+
+html.dark-mode dl.section dd {
+    color: #e0e0e0 !important;
+}
+
+/* Ensure body and html don't overflow */
+html,
+body {
+    overflow-x: hidden !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+/* Top level containers */
+#top,
+#main-content,
+#MSearchBox {
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+    box-sizing: border-box !important;
+}
+
+/* Center content with reasonable max-width */
+#doc-content,
+.contents,
+.textblock {
+    max-width: 1600px !important;
+    width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    box-sizing: border-box !important;
+    padding: 0 20px !important;
+}
+
+/* Center page container */
+.page {
+    max-width: 1600px !important;
+    width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding: 20px 40px !important;
+    box-sizing: border-box !important;
+}
+
+/* Two-column layout: Documentation left, Source code right */
+.memitem {
+    display: block !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    margin-bottom: 2em !important;
+    box-sizing: border-box !important;
+}
+
+/* Signature spans full width at top */
+.memitem>.memproto {
+    width: 100% !important;
+    margin-bottom: 1em !important;
+    box-sizing: border-box !important;
+}
+
+/* Documentation on the left */
+.memitem>.memdoc {
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+/* Put fragment (inline source) before everything else in memdoc */
+.memdoc>.fragment {
+    display: block !important;
+    width: 100% !important;
+    max-height: 600px !important;
+    overflow: auto !important;
+    background: #f8f9fa !important;
+    border: 1px solid #dee2e6 !important;
+    border-radius: 4px !important;
+    padding: 1em !important;
+    margin-bottom: 1.5em !important;
+    order: -1 !important;
+    box-sizing: border-box !important;
+}
+
+/* Make memdoc use flexbox to reorder elements */
+.memdoc {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+/* All other memdoc content comes after fragment */
+.memdoc>*:not(.fragment) {
+    order: 1 !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+html.dark-mode .memdoc>.fragment {
+    background: #1e1e1e !important;
+    border: 1px solid #3e3e3e !important;
+}
+
+/* Responsive: No special handling needed anymore */
+@media (max-width: 1400px) {
+    .memdoc>.fragment {
+        max-height: 400px !important;
+    }
+}
