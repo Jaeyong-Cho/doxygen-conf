@@ -190,7 +190,7 @@ body {
     box-sizing: border-box !important;
 }
 
-/* Put fragment (inline source) before everything else in memdoc */
+/* Put fragment (inline source) between description and call graph */
 .memdoc>.fragment {
     display: block !important;
     width: 100% !important;
@@ -201,7 +201,8 @@ body {
     border-radius: 4px !important;
     padding: 1em !important;
     margin-bottom: 1.5em !important;
-    order: -1 !important;
+    margin-top: 1.5em !important;
+    order: 2 !important;
     box-sizing: border-box !important;
 }
 
@@ -213,8 +214,29 @@ body {
     box-sizing: border-box !important;
 }
 
-/* All other memdoc content comes after fragment */
-.memdoc>*:not(.fragment) {
+/* Description/params/pre/post come first */
+.memdoc>dl,
+.memdoc>.textblock,
+.memdoc>.memdoc,
+.memdoc>p,
+.memdoc>table.params,
+.memdoc>table.memberdecls {
+    order: 1 !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+/* Call graphs come last */
+.memdoc>.dyncontent,
+.memdoc>div.dynheader,
+.memdoc>center {
+    order: 3 !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+/* All other memdoc content */
+.memdoc>*:not(.fragment):not(dl):not(.textblock):not(p):not(table):not(.dyncontent):not(div.dynheader):not(center) {
     order: 1 !important;
     max-width: 100% !important;
     box-sizing: border-box !important;
